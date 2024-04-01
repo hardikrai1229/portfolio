@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Quiz</title>
+<style>
+    header {
+        font-family: Georgia;
+        
+        text-align: center;
+        padding: 20px 0;
+    }
+    h1{
+        
+        top: 0px;
+        text-align: center;
+       
+    }
+    body {
+        background-color: rgb(27, 140, 205);
+        font-family: " gill sans";
+        margin: 0;
+        padding: 0;
+        border: 50px solid rgb(0, 0, 0);
+        color: aliceblue;
+    }
+  .quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<h1>Quiz CSS</h1>
+<div class="quiz-container">
+  <div class="question">
+    <p>1. What does CSS stand for?</p>
+    <input type="text" id="q1-answer">
+  </div>
+  <div class="question">
+    <p>2. Which of the following is NOT a valid type of CSS?</p>
+    <input type="radio" name="q2" value="a"> Inline CSS<br>
+    <input type="radio" name="q2" value="b"> External CSS<br>
+    <input type="radio" name="q2" value="c"> Inherited CSS<br>
+  </div>
+  <div class="question">
+    <p>3. What does the "Cascading" in CSS refer to?</p>
+    <input type="radio" name="question3" value="a">  Prioritizing styles<br>
+    <input type="radio" name="question3" value="b"> Applying styles from parent to child elements<br>
+    <input type="radio" name="question3" value="c"> Stylesheets applying in a cascade from top to bottom<br>
+  </div>
+  <div class="question">
+    <p>4. Which property is used to change the text color in CSS?</p>
+    <input type="radio" name="question4" value="a"> font-color<br>
+    <input type="radio" name="question4" value="b"> color<br>
+    <input type="radio" name="question4" value="c"> text-color<br>
+  </div>
+  <div class="question">
+    <p>5. What does the box-sizing property do in CSS?</p>
+    <input type="radio" name="question5" value="a"> Defines the size of the box<br>
+    <input type="radio" name="question5" value="b"> Specifies whether an element's borders and padding should be included in the total width and height of the element<br>
+    <input type="radio" name="question5" value="c"> Determines the shape of the box<br>
+  </div>
+  <div class="question">
+    <p>6. Which of the following is the correct way to include external CSS in an HTML document?</p>
+    <input type="radio" name="question6" value="a"> &lt;link rel="stylesheet" href="styles.css"&gt;<br>
+    <input type="radio" name="question6" value="b"> &lt;style src="styles.css"&gt;<br>
+    <input type="radio" name="question6" value="c"> &lt;style rel="stylesheet" href="styles.css"&gt;<br>
+  </div>
+  <div class="question">
+    <p>7. What is the default value of the position property in CSS?</p>
+    <input type="radio" name="question7" value="a"> static<br>
+    <input type="radio" name="question7" value="b"> relative<br>
+    <input type="radio" name="question7" value="c"> absolute<br>
+  </div>
+  <div class="question">
+    <p>8. Which CSS property is used to control the space between individual letters in a text?</p>
+    <input type="radio" name="question8" value="a"> word-spacing<br>
+    <input type="radio" name="question8" value="b"> letter-spacing<br>
+    <input type="radio" name="question8" value="c"> text-spacing<br>
+  </div>
+  <div class="question">
+    <p>9. Which CSS property is used to control the order of flex items?</p>
+    <input type="radio" name="question9" value="a"> order<br>
+    <input type="radio" name="question9" value="b"> flex-order<br>
+    <input type="radio" name="question9" value="c"> item-order<br>
+  </div>
+  <div class="question">
+    <p>10. What is the CSS property used for setting the size of the image border?</p>
+    <input type="radio" name="question10" value="a"> border-width<br>
+    <input type="radio" name="question10" value="b"> border-size<br>
+    <input type="radio" name="question10" value="c"> border-style<br>
+  </div>
+  <button type="submit" id="submit-button">Submit Quiz</button>
+</div>
+<div id="result"></div>
+</div>
+
+<script>
+    document.getElementById('submit-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        let score = 0;
+    
+       
+        const q1Answer = document.getElementById('q1-answer').value.toLowerCase().trim();
+        if (q1Answer === 'cascading style sheets') {
+            score++;
+        }
+    
+        
+        const q2Answer = document.querySelector('input[name="q2"]:checked');
+        if (q2Answer && q2Answer.value === 'c') {
+            score++;
+        }
+
+        const q3Answer = document.querySelector('input[name="question3"]:checked');
+        if (q3Answer && q3Answer.value === 'c') {
+            score++;
+        }
+    
+       
+        const q4Answer = document.querySelector('input[name="question4"]:checked');
+        if (q4Answer && q4Answer.value === 'b') {
+            score++;
+        }
+    
+     
+        const q5Answer = document.querySelector('input[name="question5"]:checked');
+        if (q5Answer && q5Answer.value === 'b') {
+            score++;
+        }
+    
+      
+        const q6Answer = document.querySelector('input[name="question6"]:checked');
+        if (q6Answer && q6Answer.value === 'a') {
+            score++;
+        }
+    
+       
+        const q7Answer = document.querySelector('input[name="question7"]:checked');
+        if (q7Answer && q7Answer.value === 'a') {
+            score++;
+        }
+    
+       
+        const q8Answer = document.querySelector('input[name="question8"]:checked');
+        if (q8Answer && q8Answer.value === 'b') {
+            score++;
+        }
+    
+      
+        const q9Answer = document.querySelector('input[name="question9"]:checked');
+        if (q9Answer && q9Answer.value === 'a') {
+            score++;
+        }
+    
+      
+        const q10Answer = document.querySelector('input[name="question10"]:checked');
+        if (q10Answer && q10Answer.value === 'a') {
+            score++;
+        }
+        window.location.href = `result.html?score=${score}`;
+    });
+  
+    </script>
+    </body>
+    </html>
