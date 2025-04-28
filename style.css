@@ -27,6 +27,7 @@
 /* Navigation */
 .navbar {
     backdrop-filter: blur(10px);
+    
     /* background-color: rgba(var(--bs-dark-rgb), 0.8); */
 }
 
@@ -87,7 +88,7 @@
 }
 .container{
     color: white;   
-}
+    }
 
 .skill-card:hover {
     transform: translateY(-10px);
@@ -102,7 +103,7 @@
 /* Project Cards */
 .project-card {
     position: relative;
-    overflow: hidden;
+    
     border-radius: 1rem;
     margin-bottom: 2rem;
     width: 100%;
